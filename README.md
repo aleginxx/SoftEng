@@ -12,12 +12,12 @@
 Github repository of NTUAflix software.
 
 ## Μέλη της ομάδας softeng23-16:
-- Georgia Alexopoulou | el20164
-- Georgios Gratsonis | el20900
-- Antonis Kountouris | el20178
-- Stylianos Mpouliaris Malatestas | el19214
-- Antonia Mpalta | el20873
-- Markella Mpournaka | el20030
+- Georgia Alexopoulou
+- Georgios Gratsonis
+- Antonis Kountouris
+- Stylianos Mpouliaris Malatestas
+- Antonia Mpalta 
+- Markella Mpournaka 
 
 # Εγκατάσταση
 
