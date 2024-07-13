@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account</title>
+    <link type="text/css" href="/ntuaflix/styles.css">
+    <style>
+        .confirmation-message {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="deleteButton" onclick="showConfirmation()">Delete My Account</button>
+
+    <div id="confirmation" class="confirmation-message">
+        <p>Are you sure you want to delete your account?</p>
+        <button onclick="confirmDeletion()">Yes</button>
+        <button onclick="cancelDeletion()">No</button>
+    </div>
+
+    <script>
+        function showConfirmation() {
+            const confirmationMessage = document.getElementById('confirmation');
+            confirmationMessage.style.display = 'block';
+        }
+
+        function confirmDeletion() {
+            alert('Account deleted successfully! Redirecting to login page.');
+            window.location.href = '/ntuaflix_api/login';
+        }
+
+        function cancelDeletion() {
+            // Redirect to the delete user page
+            window.location.href = '/ntuaflix_api/delete_user';
+        }
+    </script>
+</body>
+</html>

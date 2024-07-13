@@ -1,0 +1,564 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background: #2c3531;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 -50px;
+}
+
+#navbar__logo {
+    background-color: #a961a8;
+    background-image: #478d8f;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Prompt';
+    font-size: 4rem;
+}
+
+.fa-gem {
+    margin-right: 0.5rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+    font-family: 'Prompt', sans-serif;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+    font-family: 'Prompt', sans-serif;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #478d8f;
+    color: #fff;
+}
+
+.button:hover {
+    background: #a961a8;
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: #a961a8;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+        padding-right: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 60vh;
+        z-index: -1;
+        background: #2c3531;
+    }
+
+    .navbar__menu.active {
+        background: #2c3531;
+        top: 100%;
+        opacity: 1;
+        transition: 99;
+        height: 60vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+        font-family: 'Prompt';
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 80px;
+        margin: 0;
+        margin-top: 1rem;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* main section css */
+.main {
+    background-color: #141414;
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: #141414;
+    z-index: 1;
+    width: 100%;
+    max-width: 1800px;
+    padding: 0 50px;
+}
+
+.main__content h1 {
+    font-size: 3rem;
+    background-color: #116466;
+    background-image: #116466;
+    background-size: 100%;
+    font-family: 'Prompt', sans-serif;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main__content h2 {
+    font-size: 2rem;
+    background-color: #fff;
+    background-image: #fff;
+    background-size: 100%;
+    font-family: 'Prompt', sans-serif;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main__content p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Prompt', sans-serif; 
+    color: #ca9ac9;
+    border: none;
+}
+
+.main__btn {
+    font-size: 1rem;
+    font-family: 'Prompt', sans-serif;
+    background-image: linear-gradient(to top, #74b3b5 0%, #74b3b5 100%);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    color: #116466;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+}
+
+.main__btn a {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.main__btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ca9ac9;
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.main__btn:hover {
+    color: #478d8f;
+}
+
+.main__btn:hover:after {
+    width: 100%;
+}
+
+.main__img--container {
+    text-align: center;
+}
+
+#main__img {
+    height: 80%;
+    width: 80%;
+}
+
+.movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* creates a responsive grid layout */
+    gap: 1rem; /* space between grid items */
+    padding: 1rem; /* padding around the grid */
+    background-color: #141414;
+}
+
+.movie {
+    width: 180px; 
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden; 
+    position: relative; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.movie img {
+    width: 100%; /* Ensures the image is as wide as the .movie box */
+    height: auto; /* Allows the image height to scale proportionally */
+    object-fit: cover; /* Covers the .movie box, may crop the image */
+    display: block;
+}
+
+.movie-title {
+    position: absolute; 
+    bottom: 0; 
+    width: 100%; 
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.85); 
+    color: #fff;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: 'Prompt', sans-serif; 
+}
+
+/* You may also want to add some hover effects for interactivity */
+.movie:hover {
+    transform: translateY(-5px); /* slight lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* deeper shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth transition for the effects */
+}
+
+.movie-detail-flex-container {
+    display: flex;
+    background-color: #000; 
+    align-items: flex-start; /* Align items to the start of the container */
+    margin: 20px;
+}
+
+.movie-image {
+    flex: 0 0 auto; /* Do not grow or shrink the image container */
+    margin-right: 20px; /* Add some space between the image and the details */
+}
+
+.movie-detail-image {
+    width: 300px; /* Fixed width, adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 20px;
+}
+
+.movie-details {
+    flex: 1; 
+    color: #fff;
+    text-align: left;
+    font-size: 1.2rem;
+    font-family: 'Prompt', sans-serif; 
+    padding-left: 30px;
+}
+
+.background {
+    background-color: #141414;
+    color: #141414;
+}
+
+.movie-rating-votes {
+    /* Style for the rating and votes container */
+    background-color: #854d88; /* Dark background */
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 20px; /* Adjust as necessary */
+    margin-right: 90px;
+    font-size: 1.6rem;
+    font-family: 'Prompt', sans-serif; 
+}
+
+.rating, .votes {
+    /* Style for the rating and votes */
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px; /* Space between rating and votes */
+}
+
+.icon {
+    /* Style for the icons */
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #141414; /* Προσθήκη χρώματος πίσω από το πλαίσιο αναζήτησης */
+    padding: 20px; /* Προσθήκη padding γύρω από το πλαίσιο αναζήτησης */
+}
+
+.search-container label {
+    color: white; /* Λευκό χρώμα για το κείμενο των ετικετών */
+    margin-bottom: 10px; /* Απόσταση μεταξύ των ετικετών και των πεδίων εισαγωγής */
+    font-size: 1.2rem;
+    font-family: 'Prompt', sans-serif; 
+}
+
+.search-container input {
+    border-radius: 6px;
+    border: none;
+    background-color: #d0cece;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    width: 150px;
+}
+
+.search-container select {
+    border-radius: 6px;
+    border: none;
+    background-color: #d0cece;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    width: 150px;
+}
+
+.search-container select:hover {
+    background-color: #d9d7d7; /* Change background color on hover */
+}
+
+.search-container select:focus {
+    outline: none; /* Remove focus outline */
+    border: 2px solid #478d8f; /* Add border on focus */
+}
+
+.search-button {
+    border-radius: 6px;
+    background-color: #478d8f; /* Χρώμα φόντου του κουμπιού αναζήτησης */
+    color: #fff; /* Χρώμα κειμένου του κουμπιού αναζήτησης */
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px 15px;
+}
+
+.search-button:hover {
+    background-color: #a961a8; /* Χρώμα φόντου του κουμπιού κατά το hover */
+}
+
+.principals-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the minmax value as needed for your layout */
+    gap: 10px; /* Adjust the spacing between items as needed */
+    color: #fff; /* White text color */
+    font-size: 0.8rem;
+    font-family: 'Prompt', sans-serif; 
+    padding: 20px; /* Adjust the padding around the container as needed */
+    background-color: #000; /* Black background */
+}
+
+.principal {
+    cursor: pointer;
+    padding: 10px; /* Adjust the padding inside each principal box as needed */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.principal a {
+    color: inherit; /* Ensure the anchor tag inherits the color from the .principal class */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.principal:hover {
+    background-color: #478d8f; /* Change to purple background on hover */
+}
+
+.principal-image img {
+    max-width: 200px; /* Adjust this value as needed */
+    height: auto;
+}
+
+.user_details p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: 'Prompt', sans-serif; 
+    color: #fff;
+    border: none;
+}
+
+@media screen and (max-width: 760px) {
+    .main__container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+
+    .main__content {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .main__content h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .main__content h2 {
+        font-size: 3rem;
+    }
+
+    .main__content p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main__content h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+
+    .main__content h2 {
+        font-size: 2rem;
+    }
+
+    .main__content p {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .main__btn {
+        padding: 12px 36px;
+        margin: 2.5rem 0;
+    }
+
+    .movies-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* adjust card size for small screens */
+    }
+}
